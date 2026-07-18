@@ -1,0 +1,13 @@
+{
+  "fixture_id": "wc-final-001",
+  "fixture_status": "FINAL",
+  "home_score": 2,
+  "away_score": 1,
+  "declared_result": "HOME",
+  "observed_at": "2026-07-13T20:00:00+00:00",
+  "proof_status": "VALID",
+  "root_status": "MATCH",
+  "proof_reference": "proof-abc",
+  "expected_root": "abababababababababababababababababababababababababababababababab",
+  "observed_root": "abababababababababababababababababababababababababababababababab"
+}

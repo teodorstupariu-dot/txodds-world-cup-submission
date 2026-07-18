@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: proofguard-live
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: PROOFGUARD_MODE
+        value: AUTO
+      - key: PROOFGUARD_POLL_SECONDS
+        value: "60"
+      - key: PROOFGUARD_WITH_SCORES
+        value: "true"
+      - key: PROOFGUARD_REPLAY_FALLBACK
+        value: "true"
+      - key: PROOFGUARD_AUTO_START
+        value: "true"
+      - key: PROOFGUARD_MAX_RECEIPTS
+        value: "100"
+      - key: TXLINE_NETWORK
+        value: mainnet
+      - key: TXLINE_ORIGIN
+        value: https://txline.txodds.com
+      - key: PROOFGUARD_FIXTURE_ID
+        sync: false
+      - key: PROOFGUARD_MODEL_PROBABILITIES_JSON
+        sync: false
+      - key: TXLINE_GUEST_JWT
+        sync: false
+      - key: TXLINE_API_TOKEN
+        sync: false

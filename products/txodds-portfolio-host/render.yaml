@@ -1,0 +1,25 @@
+# One Render service running both products in a single always-on process.
+# Build context is the repository `products/` directory.
+services:
+  - type: web
+    name: txodds-portfolio-host
+    runtime: docker
+    plan: free
+    dockerfilePath: ./products/txodds-portfolio-host/Dockerfile
+    dockerContext: ./products
+    healthCheckPath: /health
+    autoDeploy: false
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: PROOFGUARD_MODE
+        value: AUTO
+      - key: PROOFGUARD_AUTO_START
+        value: "true"
+      - key: PROOFGUARD_POLL_SECONDS
+        value: "60"
+      # Provide TxLINE credentials privately in the Render dashboard for LIVE mode.
+      - key: TXLINE_GUEST_JWT
+        sync: false
+      - key: TXLINE_API_TOKEN
+        sync: false

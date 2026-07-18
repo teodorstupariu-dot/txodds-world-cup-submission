@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Credentials and private configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*private-key*
+*seed-phrase*
+
+# Local live-input and release-link files
+models.json
+submission_links.json
+*credentials*.json
+*token*.json
+*wallet*.json
+
+# Generated release and demo outputs
+**/outputs/
+**/dist/
+**/build/
+**/RELEASE_REPORT.json
+**/SBOM.spdx.json
+**/SECURITY_SCAN.json
+exports/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

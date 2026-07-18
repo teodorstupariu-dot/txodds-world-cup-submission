@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finalitygate-worldcup-resolver"
+version = "0.1.0"
+description = "Proof-aware World Cup outcome-market finality resolver for the TxODDS hackathon"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+]
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "build>=1.2", "setuptools>=68", "wheel>=0.45", "httpx>=0.27,<1"]
+
+[project.scripts]
+finalitygate = "finalitygate.cli:main"
+finalitygate-web = "finalitygate.web.app:run"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

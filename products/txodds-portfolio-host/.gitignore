@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Local environments
+.venv/
+venv/
+
+# Local outputs / observations (not versioned)
+outputs/
+dist/
+build/
+*.log

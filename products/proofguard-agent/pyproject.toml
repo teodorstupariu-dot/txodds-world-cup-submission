@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "proofguard-autonomous-agent"
+version = "0.2.0"
+description = "Autonomous TxODDS paper-trading agent with a non-bypassable market-integrity policy and live web dashboard"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+]
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "build>=1.2",
+  "setuptools>=68",
+  "wheel>=0.45",
+  "httpx>=0.27,<1",
+]
+
+[project.scripts]
+proofguard = "proofguard_agent.cli:main"
+proofguard-web = "proofguard_agent.web.app:run"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]

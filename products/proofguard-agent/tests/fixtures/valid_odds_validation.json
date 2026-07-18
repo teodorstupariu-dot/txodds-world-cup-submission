@@ -1,0 +1,42 @@
+{
+  "odds": {
+    "FixtureId": 1814961080,
+    "MessageId": "1814961080:00003:000084-10011-stab",
+    "Ts": 1770845011255,
+    "Bookmaker": "ExampleBook",
+    "BookmakerId": 3,
+    "SuperOddsType": "MATCH_RESULT",
+    "GameState": "LIVE",
+    "InRunning": true,
+    "MarketParameters": null,
+    "MarketPeriod": "FULL_TIME",
+    "PriceNames": ["HOME", "DRAW", "AWAY"],
+    "Prices": [0.45, 0.30, 0.25]
+  },
+  "summary": {
+    "fixtureId": 1814961080,
+    "updateStats": {
+      "updateCount": 84,
+      "minTimestamp": 1770845000000,
+      "maxTimestamp": 1770845020000
+    },
+    "oddsSubTreeRoot": [
+      -1, -2, -3, -4, -5, -6, -7, -8,
+      -9, -10, -11, -12, -13, -14, -15, -16,
+      0, 1, 2, 3, 4, 5, 6, 7,
+      8, 9, 10, 11, 12, 13, 14, 15
+    ]
+  },
+  "subTreeProof": [
+    {
+      "hash": "1111111111111111111111111111111111111111111111111111111111111111",
+      "isRightSibling": true
+    }
+  ],
+  "mainTreeProof": [
+    {
+      "hash": "2222222222222222222222222222222222222222222222222222222222222222",
+      "isRightSibling": false
+    }
+  ]
+}

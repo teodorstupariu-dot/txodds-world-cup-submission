@@ -1,0 +1,34 @@
+{
+  "summary": {
+    "fixtureId": 17952170,
+    "updateStats": {
+      "updateCount": 12,
+      "minTimestamp": 1783472400000,
+      "maxTimestamp": 1783472700000
+    },
+    "eventStatsSubTreeRoot": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+  },
+  "subTreeProof": [
+    {
+      "hash": "1111111111111111111111111111111111111111111111111111111111111111",
+      "isRightSibling": true
+    }
+  ],
+  "mainTreeProof": [
+    {
+      "hash": "2222222222222222222222222222222222222222222222222222222222222222",
+      "isRightSibling": false
+    }
+  ],
+  "statToProve": {
+    "statKey": 1002,
+    "value": 2
+  },
+  "eventStatRoot": "3333333333333333333333333333333333333333333333333333333333333333",
+  "statProof": [
+    {
+      "hash": "4444444444444444444444444444444444444444444444444444444444444444",
+      "isRightSibling": true
+    }
+  ]
+}

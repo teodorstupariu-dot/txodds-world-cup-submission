@@ -1,0 +1,7 @@
+{
+  "market_id": "wc-final-1x2",
+  "fixture_id": "wc-final-001",
+  "market_type": "MATCH_RESULT",
+  "selections": ["HOME", "DRAW", "AWAY"],
+  "policy_version": "finalitygate-v1"
+}

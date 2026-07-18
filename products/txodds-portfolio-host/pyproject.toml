@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "txodds-portfolio-host"
+version = "0.1.0"
+description = "Combined one-service host mounting the ProofGuard and FinalityGate World Cup products"
+requires-python = ">=3.11"
+# The two products are installed from their local paths (see README / Dockerfile);
+# they are intentionally not published packages.
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "httpx>=0.27,<1",
+]
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "build>=1.2",
+  "setuptools>=68",
+  "wheel>=0.45",
+  "httpx>=0.27,<1",
+]
+
+[project.scripts]
+txodds-portfolio-host = "txodds_portfolio_host.app:run"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
